@@ -76,3 +76,8 @@ def markdown_allowed():
         % settings.MARKDOWN_DEUX_HELP_URL)
 
 
+@register.simple_tag
+def markdown_ok():
+    """Ultra brief indication that Markdown is available, for cramped UIs"""
+    return ('Use <a href="%s" target="_blank">Markdown</a>!'
+        % settings.MARKDOWN_DEUX_HELP_URL)
